@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>My Minimal Markdown Editor</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/jquery.splitter.css ">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <div class="app-container">
+        
+            <header class="highlight">
+                <div class="logo dark text-highlight">
+                    M³E
+                </div>
+                <div class="title text-midtone">
+                    <input type="text" name="title" placeholder="Title" autofocus="autofocus" class="text-dark"/>
+                </div>
+                <nav>
+                    <a href="#"><svg id="open-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="72px" height="72px" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
+                        <path d="m 20.135457,35.388208 0,-10.358 9.437,0 c 0.591,0 1.121,-0.351 1.353,-0.891999 0.232,-0.543 0.119,-1.169001 -0.29,-1.596 l -13.774,-14.4039994 c -0.551,-0.578001 -1.574,-0.577001 -2.125,-10e-4 L 0.9604564,22.543209 c -0.407999,0.428 -0.520999,1.054 -0.289,1.595 0.231001,0.542 0.762001,0.893 1.353001,0.893 l 9.1109996,0 0,8.1075 z m 46.291544,-27.6512082 -26.288001,0 c -2.481,0 -4.5,2.019 -4.5,4.5000002 l 0,20.716001 9,-10e-4 0,-16.215 17.288,0 0,42.104 -41.788,0 0,-42.832 -9,0.18 0,47.152 c 0,2.481001 2.019,4.5 4.5,4.5 l 50.788001,0 c 2.481,0 4.5,-2.018999 4.5,-4.5 l 0,-51.104 c 0,-2.4820002 -2.019,-4.5000002 -4.5,-4.5000002 z M 35.63928,29.52872 l 0,12.592 4.5,0 c 2.481,0 4.5,-2.019 4.5,-4.5 l 0,-6.832 z" /></svg></a>
+                    <a href="#"><svg id="save-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="72px" height="72px" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
+                        <path d="M60.667,7.737H34.379c-2.481,0-4.5,2.019-4.5,4.5v20.716h-9.437c-0.591,0-1.121,0.351-1.353,0.892   c-0.232,0.543-0.119,1.169,0.29,1.596l13.774,14.404c0.551,0.578,1.574,0.577,2.125,0.001L49.054,35.44   c0.408-0.428,0.521-1.054,0.289-1.595c-0.231-0.542-0.762-0.893-1.353-0.893h-9.111V16.737h17.288v42.104H14.379V7.737h-4.5   c-2.481,0-4.5,2.019-4.5,4.5v51.104c0,2.481,2.019,4.5,4.5,4.5h50.788c2.481,0,4.5-2.019,4.5-4.5V12.237   C65.167,9.755,63.148,7.737,60.667,7.737z"/>
+                    </svg></a>
+                    <!-- not implemented
+                    <a href="#"><svg id ="cheat" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Your_Icon" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                        <polygon points="50.331,79.217 19.427,97.562 27.331,62.504 0.331,38.784 36.113,35.463 50.331,2.453 64.546,35.463 100.331,38.784   73.332,62.504 81.235,97.562 "/>
+                    </svg></a>-->
+                    <a href="#"><svg id="print-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="100px" height="95.2830188679px" viewBox="0 0 106.254 101.667" enable-background="new 0 0 106.254 101.667" xml:space="preserve">
+                        <path d="M99.409,51.727H6.85c-2.052,0-3.723,1.668-3.723,3.721v39.606c0,2.052,1.671,3.721,3.723,3.721h92.559  c2.053,0,3.719-1.669,3.719-3.721V55.447C103.127,53.395,101.461,51.727,99.409,51.727z"/>
+                        <path d="M22.328,2.937v45.009h61.6V2.937H22.328z M71.902,40.011H34.353v-3.797h37.549V40.011z M71.902,27.34H34.353v-3.797h37.549  V27.34z M71.902,14.67H34.353v-3.797h37.549V14.67z"/>
+                    </svg></a>
+                    <!-- no dash at the moment
+                    <a href="#"><svg id="dash-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                        <path d="M6.498,62H18v27.23c0,3.557,2.414,6.77,6.005,6.77h51.016C78.611,96,82,92.787,82,89.23V62h11.365   c0.008,0,0.015,0,0.02,0c3.591,0,6.502-2.801,6.502-6.359c0-1.873-0.808-3.479-2.096-4.656L54.647,5.95   c-1.229-1.281-2.933-2.033-4.716-2.033c-1.782,0-3.062,0.672-4.29,1.953L32,20.515V11.37c0-3.396-3.337-6.15-7-6.15   s-7,2.753-7,6.15v22.957L1.841,51.089c-1.789,1.866-2.313,4.735-1.286,7.101C1.58,60.555,3.899,62,6.498,62z M49.932,21.473   L78.227,51h-3.206C71.431,51,68,52.179,68,55.735V83H32V55.735C32,52.179,27.596,51,24.005,51h-2.367L49.932,21.473z"/>
+                    </svg></a>-->
+                    <a href="#"><svg id="question-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Your_Icon" x="0px" y="0px" width="99.085px" height="100px" viewBox="0 0 99.085 100" enable-background="new 0 0 99.085 100" xml:space="preserve">
+                        <path d="M49.541,0C22.198-0.019,0.027,22.376,0,49.978C0.027,77.621,22.198,100.01,49.541,100  c27.353,0.011,49.523-22.379,49.544-50.021C99.064,22.376,76.894-0.019,49.541,0z M49.541,88.483  c-21.038,0-38.096-17.231-38.079-38.512c-0.021-21.229,17.041-38.457,38.079-38.451c21.048-0.006,38.109,17.222,38.132,38.458  C87.65,71.251,70.589,88.483,49.541,88.483z"/>
+                        <path d="M45.37,64.349l9.073-0.041v-7.015c-0.023-1.901,0.863-3.704,3.242-5.261c2.38-1.563,9.016-4.725,9.025-13.061  c-0.01-8.301-6.98-14.016-12.842-15.251c-5.854-1.191-12.203-0.396-16.699,4.561c-4.042,4.396-4.892,7.892-4.905,15.603h9.07v-1.799  c-0.014-4.103,0.458-8.438,6.312-9.64c3.222-0.631,6.226,0.375,8.018,2.103c2.024,2.007,2.042,6.496-1.222,8.722l-5.09,3.465  c-2.959,1.919-3.977,4.038-3.983,7.142V64.349L45.37,64.349z"/>
+                        <polygon points="45.325,77.194 45.325,67.903 54.484,67.903 54.484,77.194 "/>
+                    </svg></a>
+                </nav>
+            </header>
+            
+            <section id="editor" class="editor midtone text-dark">
+                <div class="md">
+                    <textarea placeholder="Just write your text." name="description" class="text-dark"></textarea>
+                </div>
+                <div class="rendered-view">
+                    <p>Just write your text.</p>
+                </div>
+            </section>
+            
+            <section id="question-form" class="text-highlight">
+                <h1>question Test</h1>
+            </section>
+            
+            <!--<footer class="dark text-highlight">
+                <p>Copyright is for pussies.</p>
+            </footer>-->
+        
+        </div>
+
+        <script src="js/vendor/jquery-1.10.1.min.js"></script>
+        <script src='js/vendor/jquery.splitter-0.6.0.js'></script>
+        <script src='js/vendor/jquery.autosize.js'></script>
+        <script src='js/vendor/markdown.js'></script>
+        <!--<script src='js/vendor/printThis.js'></script>-->
+        <script src='js/jquery.center.js'></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

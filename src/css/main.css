@@ -1,0 +1,371 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body{
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Open Sans";
+    font-size: 14px;
+    min-height: 100%;
+}
+
+.highlight{
+    background: #efefef;
+}
+.midtone{
+    background: #d6d6d6;
+}
+.dark{
+    background: #3e3e3e;
+}
+.text-dark{
+    color: #3e3e3e;
+}
+.text-midtone{
+    color: #d6d6d6;
+}
+.text-highlight{
+    color:  #efefef;
+}
+textarea, input{
+    border: none;
+    shadow: none;
+    background: none;
+    outline: none;
+}
+
+header{
+    height: 85px;
+}
+
+.logo{
+    height: 85px;
+    width: 101px;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    line-height: 85px;
+    border-right: 11px solid #efefef;
+    float: left;
+}
+.title{
+}
+.title input{
+    padding-left: 20px;
+    margin: 10px 0;
+    height: 65px;
+    line-height: 65px;
+    font-size: 48px;
+    font-family: "Open Sans Light";
+    /*font-style: italic;*/
+    border: none;
+    shadow: none;
+    background: none;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    float: left;
+    overflow: hidden;
+}
+nav{
+    position: absolute;
+    right: 28px;
+    top: 32px;
+}
+nav svg{
+    margin-left: 15px;
+    height: 24px;
+    width: 24px;
+    
+}
+.container{
+    padding: 18px;
+}
+
+.description textarea{
+    width:100%;
+    font-size: 16px;
+    resize: none;
+}
+.editor textarea{
+    padding-top: 18px;
+    font-size: 16px;
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+}
+.description textarea{
+    overflow: hidden;
+}
+.editor div {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.md, .rendered-view{
+    width: 300px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    float: left;
+}
+.md{
+    overflow: hidden;
+}
+.rendered-view{
+    padding-left: 18px;
+    font-size: 18px;
+}
+.vsplitter {
+	width: 3px;
+	background: #3e3e3e;
+}
+footer p{
+        text-align: center;
+        font-weight: bold;
+        margin: 0 0;
+        padding: 20px;
+}
+
+::-webkit-scrollbar-track-piece{
+	background-color:#cecece;
+	-webkit-border-radius:0;
+}
+
+::-webkit-scrollbar{
+	width:8px;
+	height:8px;
+        position: relative;
+        left: -18px;
+}
+
+::-webkit-scrollbar-thumb{ 
+	height:50px;
+	background-color:#A1A1A1; 
+	-webkit-border-radius:0px;
+	outline-offset:-2px;
+	border: 2px solid #cecece;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	height:50px; 
+	background-color:#A1A1A1;
+	-webkit-border-radius:0px;
+}
+
+nav a:hover svg{
+    fill: #6D6D6D;
+}
+
+section#question-form{
+    opacity: 0;
+    z-index: 999;
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

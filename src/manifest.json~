@@ -1,0 +1,27 @@
+{
+ "name": "My Minimal Markdown Editor",
+ "description": "A Chrome WebApp for writing markdown",
+ "version": "1.0",
+ "manifest_version": 2,
+ "offline_enabled" : true,
+ "app": {
+  "background": {
+    "scripts": [ "background.js" ]
+  }
+ },
+ "permissions": [  {"fileSystem": ["write", "retainEntries"]},
+    "storage"
+ ],
+ "file_handlers": {
+    "text": {
+      "types": [
+          "text/*"
+      ],
+      "title": "Markdown text editor"
+    }
+ },
+  "sandbox": {
+    "pages": [ "index.html" ]
+  },
+  "icons": { "16": "icon-16.png", "32": "icon-32.png", "128": "icon-128.png", "256": "icon-256.png" }
+}
